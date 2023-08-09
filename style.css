@@ -144,7 +144,7 @@ section.hero{
   margin: 0 20px;
   padding: 20px;
   border-radius: 15px;
-  background-image:url(https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MDcwNTd8&ixlib=rb-4.0.3&q=85);
+  background-image:url(src/images/hero.jpeg);
   background-size:cover;
   background-position: center center;
   display:flex;
