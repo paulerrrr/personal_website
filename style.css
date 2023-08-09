@@ -33,7 +33,7 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6,.likeh1{
-  font-family: Bitter, serif;
+  font-family: Bitter, sans-serif;
   font-weight: 700;
   line-height:1.1;
   color:#002B5B;
@@ -312,7 +312,7 @@ footer{
   line-height: 0.8; 
   text-align:center; 
   font-weight:300;
-  font-family: Bitter, serif;
+  font-family: Bitter, sans-serif;
   color:#002B5B;
 }
 .highlight-item{
