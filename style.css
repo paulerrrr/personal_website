@@ -4,6 +4,22 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 */
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('src/fonts/Bitter-VariableFont_wght.ttf') format('ttf');
+    font-weight: 300 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('src/fonts/OpenSans-VariableFont_wdth,wght.ttf') format('ttf');
+    font-weight: 400 700; 
+    font-style: normal;
+}
+
+
 html{
 	scroll-behavior: smooth;
 }
