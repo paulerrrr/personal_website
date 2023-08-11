@@ -169,10 +169,10 @@ img{
   background: antiquewhite;
 }
 
-.services>.row:first-child{
+.services .row.first{
   border-radius:15px 15px 0 0;
 }
-.services>.row:last-child{
+.services>.row.last{
   border-radius: 0 0 15px 15px;
 }
 
