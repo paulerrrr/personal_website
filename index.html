@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <script>
+      (function() {
+    // Block new cookies from being set
+    Object.defineProperty(document, 'cookie', {
+        set: function() {
+            console.warn('Cookie setting attempt blocked');
+        },
+        get: function() {
+            return ""; // return an empty string to prevent reading cookies too
+        }
+    });
+
+    // Remove existing cookies
+    let cookies = document.cookie.split(";");
+
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i];
+        let eqPos = cookie.indexOf("=");
+        let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    }
+
+    console.log('All cookies removed and further cookie setting is blocked.');
+})();
+
+    </script>
+
+    
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
