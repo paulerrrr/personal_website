@@ -54,6 +54,10 @@
   font-weight: 700;
   src: url('../src/fonts/bitter-v32-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+:root {
+  --red: #d72626;
+  --navy: #002B5B;
+}
 
 
 html{
@@ -130,13 +134,13 @@ img{
 .cta{
   font-size:22px;
   font-weight:700;
-  color:#EA5455;
+  color:var(--blue);
 }
 .text-center{
   text-align:center;
 }
 .link{
-  color:#EA5455;
+  color:var(--blue);
   text-decoration: underline;
   text-decoration-thickness:0.15em;
   text-underline-offset:0.15em; 
