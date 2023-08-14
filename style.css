@@ -134,13 +134,13 @@ img{
 .cta{
   font-size:22px;
   font-weight:700;
-  color:var(--blue);
+  color:var(--red);
 }
 .text-center{
   text-align:center;
 }
 .link{
-  color:var(--blue);
+  color:var(--red);
   text-decoration: underline;
   text-decoration-thickness:0.15em;
   text-underline-offset:0.15em; 
