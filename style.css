@@ -403,6 +403,29 @@ section.contact-form{
   padding: 20px 20px 0;
 }
 
+/* About Me Section */
+
+section.about-me{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom:30px;
+}
+
+.about-me-text{
+  min-width:400px;
+  flex: 1 1 0;
+}
+
+.profil-img{
+  aspect-ratio: 1 / 1;
+  border-radius: 100%; 
+  max-width: 220px;
+  float:left;
+  margin: 0 30px 30px 0;
+}
+
+
 
 @media only screen and (max-width: 660px) {
   .section{
