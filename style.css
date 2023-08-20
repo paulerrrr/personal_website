@@ -366,6 +366,7 @@ footer{
   font-weight:300;
   font-family: Bitter, sans-serif;
   color:#002B5B;
+  margin-top: 30px;
 }
 .highlight-item{
   flex-grow:1;
