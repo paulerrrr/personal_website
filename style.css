@@ -3,52 +3,51 @@
 
 /* open-sans-regular - latin */
 @font-face {
-  font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: fallback;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('../src/fonts/open-sans-v35-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+  src: url('../src/fonts/open-sans-v35-latin-regular.woff2') format('woff2');
 /* open-sans-italic - latin */
 @font-face {
-  font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: fallback;
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 400;
-  src: url('../src/fonts/open-sans-v35-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../src/fonts/open-sans-v35-latin-italic.woff2') format('woff2'); 
 }
 /* open-sans-700 - latin */
 @font-face {
-  font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: fallback;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('../src/fonts/open-sans-v35-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../src/fonts/open-sans-v35-latin-700.woff2') format('woff2'); 
 }
 
 /* bitter-300 - latin */
 @font-face {
-  font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: fallback;
   font-family: 'Bitter';
   font-style: normal;
   font-weight: 300;
-  src: url('../src/fonts/bitter-v32-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../src/fonts/bitter-v32-latin-300.woff2') format('woff2');
 }
 /* bitter-500 - latin */
 @font-face {
-  font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: fallback;
   font-family: 'Bitter';
   font-style: normal;
   font-weight: 500;
-  src: url('../src/fonts/bitter-v32-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../src/fonts/bitter-v32-latin-500.woff2') format('woff2');
 }
 /* bitter-700 - latin */
 @font-face {
-  font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: fallback;
   font-family: 'Bitter';
   font-style: normal;
   font-weight: 700;
-  src: url('../src/fonts/bitter-v32-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../src/fonts/bitter-v32-latin-700.woff2') format('woff2'); 
 }
 :root {
   --red: #d72626;
