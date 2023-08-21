@@ -446,3 +446,9 @@ section.about-me{
   }
 }
 
+@media (max-width: 599px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
