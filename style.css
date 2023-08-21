@@ -246,26 +246,30 @@ section.hero div{
 
 /* Nav */
 nav{
-  font-family: Bitter, sans-serif;
+  font-family: Bitter, serif;
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-nav ul{
-  list-style-type: none;
-  text-align:right;
-}
-
-nav li {
-  display: inline;
-  margin: 20px; 
-}
-
-nav li a{
+nav a{
   text-decoration: none;
   color: #002B5B;
 }
 
 nav .logo{
-  float:left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .logo img{
+  width:30px;
+  height:30px;
+  margin-right: 6px;
 }
 
 /* Certification Section */
