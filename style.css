@@ -114,6 +114,7 @@ p,li{
   font-size:18px;
   line-height:1.6em;
   cursor:default;
+  max-width: 800px;
 }
 a{
   cursor:pointer;
