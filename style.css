@@ -8,6 +8,7 @@
   font-style: normal;
   font-weight: 400;
   src: url('../src/fonts/open-sans-v35-latin-regular.woff2') format('woff2');
+}
 /* open-sans-italic - latin */
 @font-face {
   font-display: fallback;
