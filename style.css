@@ -48,7 +48,8 @@
   font-style: normal;
   font-weight: 700;
   src: url('../src/fonts/bitter-v32-latin-700.woff2') format('woff2'); 
-}
+
+
 :root {
   --red: #d72626;
   --navy: #002B5B;
