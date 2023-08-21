@@ -446,7 +446,7 @@ section.about-me{
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 640px) {
   .hide-mobile {
     display: none !important;
   }
