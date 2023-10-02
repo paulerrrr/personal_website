@@ -447,6 +447,11 @@ section.about-me{
   flex: 1 1 0;
 }
 
+.about-me-text .callout{
+  	font-style:italic;
+	font-size:28px;	
+}
+
 .profil-img{
   aspect-ratio: 1 / 1;
   border-radius: 100%; 
