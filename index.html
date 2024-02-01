@@ -129,7 +129,7 @@ function calculatePlanCost(planIds, coreSeatCost, serviceSeatCost, salesSeatCost
   
     <h2>HubSpot's New Pricing Model
  Calculator</h2>
-    <div style="display:flex">
+    <div style="display:flex; flex-wrap: wrap;">
       <div style="    max-width: 400px;
     padding-right: 40px;">
         <p>
@@ -151,7 +151,7 @@ function calculatePlanCost(planIds, coreSeatCost, serviceSeatCost, salesSeatCost
       
 
     <!-- Starter Plan -->
-    <div>
+    <div style="max-width:600px;">
         <h3>Starter Pricing</h3>
         <label for="starterCoreSeats">Number of Starter Core-Seats:</label>
         <input type="number" id="starterCoreSeats" value="0" min="0" onchange="calculateTotal()">
