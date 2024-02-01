@@ -31,6 +31,71 @@
 
     </script>
 
+    <script>
+      function calculateTotal() {
+    // Starter Plan Costs
+    const STARTER_CORE_SEAT_COST = 15;
+    let starterCoreSeats = parseInt(document.getElementById("starterCoreSeats").value) || 0;
+    let starterTotal = starterCoreSeats * STARTER_CORE_SEAT_COST;
+
+    // Professional Plan Costs
+    const PRO_CORE_SEAT_COST = 50;
+    const PRO_SERVICE_SEAT_COST = 100;
+    const PRO_SALES_SEAT_COST = 100;
+    let professionalTotal = calculatePlanCost(
+        ['marketingHubPro', 'cmsHubPro', 'operationsHubPro', 'crmSuitePro'], 
+        PRO_CORE_SEAT_COST, 
+        PRO_SERVICE_SEAT_COST, 
+        PRO_SALES_SEAT_COST,
+        'professionalCoreSeats', 
+        'professionalServiceSeats', 
+        'professionalSalesSeats'
+    );
+
+    // Enterprise Plan Costs
+    const ENTERPRISE_CORE_SEAT_COST = 75;
+    const ENTERPRISE_SERVICE_SEAT_COST = 130;
+    const ENTERPRISE_SALES_SEAT_COST = 150;
+    let enterpriseTotal = calculatePlanCost(
+        ['marketingHubEnt', 'cmsHubEnt', 'operationsHubEnt', 'crmSuiteEnt'], 
+        ENTERPRISE_CORE_SEAT_COST, 
+        ENTERPRISE_SERVICE_SEAT_COST, 
+        ENTERPRISE_SALES_SEAT_COST,
+        'enterpriseCoreSeats', 
+        'enterpriseServiceSeats', 
+        'enterpriseSalesSeats'
+    );
+
+    // Calculate and Display Total Cost
+    let totalCost = starterTotal + professionalTotal + enterpriseTotal;
+    document.getElementById("totalCost").innerText = totalCost;
+}
+
+function calculatePlanCost(planIds, coreSeatCost, serviceSeatCost, salesSeatCost, coreSeatInputId, serviceSeatInputId, salesSeatInputId) {
+    let baseCost = 0;
+    let includedCoreSeats = 0;
+    let includedServiceSeats = 0;
+    let includedSalesSeats = 0;
+
+    planIds.forEach(planId => {
+        let planCheckbox = document.getElementById(planId);
+        if (planCheckbox.checked) {
+            baseCost += parseInt(planCheckbox.getAttribute('data-cost'));
+            includedCoreSeats += parseInt(planCheckbox.getAttribute('data-core-seats') || 0);
+            includedServiceSeats += parseInt(planCheckbox.getAttribute('data-service-seats') || 0);
+            includedSalesSeats += parseInt(planCheckbox.getAttribute('data-sales-seats') || 0);
+        }
+    });
+
+    let extraCoreSeats = Math.max(0, parseInt(document.getElementById(coreSeatInputId).value) - includedCoreSeats) || 0;
+    let serviceSeats = Math.max(0, parseInt(document.getElementById(serviceSeatInputId).value) - includedServiceSeats) || 0;
+    let salesSeats = Math.max(0, parseInt(document.getElementById(salesSeatInputId).value) - includedSalesSeats) || 0;
+
+    return baseCost + (extraCoreSeats * coreSeatCost) + (serviceSeats * serviceSeatCost) + (salesSeats * salesSeatCost);
+}
+
+    </script>
+
     
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -59,6 +124,78 @@
   </a>
   <a class="link" href="#contact">Kontakt</a>
 </nav>
+
+<section>
+    <div>
+    <h2>Plan Price Calculator</h2>
+
+    <!-- Starter Plan -->
+    <div>
+        <h3>Starter Plan</h3>
+        <label for="starterCoreSeats">Number of Starter Core-Seats:</label>
+        <input type="number" id="starterCoreSeats" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <!-- Professional Plan -->
+    <div>
+        <h3>Professional Plan</h3>
+        <div>
+            <input type="checkbox" id="marketingHubPro" data-cost="890" data-core-seats="3" onchange="calculateTotal()">
+            <label for="marketingHubPro">Marketing Hub Professional - $890</label>
+        </div>
+        <div>
+            <input type="checkbox" id="cmsHubPro" data-cost="400" data-core-seats="3" onchange="calculateTotal()">
+            <label for="cmsHubPro">CMS Hub Professional - $400</label>
+        </div>
+        <div>
+            <input type="checkbox" id="operationsHubPro" data-cost="800" data-core-seats="1" onchange="calculateTotal()">
+            <label for="operationsHubPro">Operations Hub Professional - $800</label>
+        </div>
+        <div>
+            <input type="checkbox" id="crmSuitePro" data-cost="1200" data-core-seats="5" data-service-seats="1" data-sales-seats="1">
+            <label for="crmSuitePro">CRM Suite Professional - $1200</label>
+        </div>
+        <label for="professionalCoreSeats">Professional Core-Seats:</label>
+        <input type="number" id="professionalCoreSeats" value="0" min="0" onchange="calculateTotal()"><br>
+        <label for="professionalServiceSeats">Professional Service-Seats:</label>
+        <input type="number" id="professionalServiceSeats" value="0" min="0" onchange="calculateTotal()"><br>
+        <label for="professionalSalesSeats">Professional Sales-Seats:</label>
+        <input type="number" id="professionalSalesSeats" value="0" min="0" onchange="calculateTotal()"><br>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div>
+        <h3>Enterprise Plan</h3>
+        <div>
+            <input type="checkbox" id="marketingHubEnt" data-cost="3600" data-core-seats="5" onchange="calculateTotal()">
+            <label for="marketingHubEnt">Marketing Hub Enterprise - $3600</label>
+        </div>
+        <div>
+            <input type="checkbox" id="cmsHubEnt" data-cost="1200" data-core-seats="5" onchange="calculateTotal()">
+            <label for="cmsHubEnt">CMS Hub Enterprise - $1200</label>
+        </div>
+        <div>
+            <input type="checkbox" id="operationsHubEnt" data-cost="2000" data-core-seats="1" onchange="calculateTotal()">
+            <label for="operationsHubEnt">Operations Hub Enterprise - $2000</label>
+        </div>
+        <div>
+            <input type="checkbox" id="crmSuiteEnt" data-cost="4000" data-core-seats="5" data-service-seats="1" data-sales-seats="1">
+            <label for="crmSuiteEnt">CRM Suite Enterprise - $4000</label>
+        </div>
+        <label for="enterpriseCoreSeats">Enterprise Core-Seats:</label>
+        <input type="number" id="enterpriseCoreSeats" value="0" min="0" onchange="calculateTotal()"><br>
+        <label for="enterpriseServiceSeats">Enterprise Service-Seats:</label>
+        <input type="number" id="enterpriseServiceSeats" value="0" min="0" onchange="calculateTotal()"><br>
+        <label for="enterpriseSalesSeats">Enterprise Sales-Seats:</label>
+        <input type="number" id="enterpriseSalesSeats" value="0" min="0" onchange="calculateTotal()"><br>
+    </div>
+
+    <h3>Total Cost: $<span id="totalCost">0</span></h3>
+
+    <script src="calculator.js"></script>
+    
+  </div>
+</section>
 
 <section class="hero">
   <div>
