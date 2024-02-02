@@ -200,7 +200,7 @@ function calculatePlanCost(planIds, coreSeatCost, serviceSeatCost, salesSeatCost
             <label for="operationsHubEnt">Operations Hub Enterprise <br>Includes 1 Core Seat - $2000</label>
         </div>
         <div style="padding-bottom:10px">
-            <input type="checkbox" id="crmSuiteEnt" data-cost="4000" data-core-seats="5" data-service-seats="1" data-sales-seats="1">
+            <input type="checkbox" id="crmSuiteEnt" data-cost="4000" data-core-seats="5" data-service-seats="1" data-sales-seats="1" onchange="calculateTotal()">
             <label for="crmSuiteEnt">CRM Suite Enterprise <br>Includes 5 Core Seats, 1 Sales Seat Enterprise, 1 Service Seat Enterprise<br> $4000</label>
         </div>
         <label for="enterpriseCoreSeats">Enterprise Core-Seats:</label>
